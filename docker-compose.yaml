@@ -1,0 +1,8 @@
+services:
+  webrtcflutter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./configs:/app/configs
