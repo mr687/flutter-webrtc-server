@@ -11,5 +11,9 @@ FROM alpine:3.20
 WORKDIR /app
 
 COPY --from=builder /app/flutter-webrtc-server /app/flutter-webrtc-server
+COPY --from=builder /app/configs /app/configs
+
+EXPOSE 8086
+EXPOSE 19302
 
 ENTRYPOINT ["/app/flutter-webrtc-server"]
